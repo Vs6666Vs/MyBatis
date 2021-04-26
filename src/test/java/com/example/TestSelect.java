@@ -39,6 +39,7 @@ public class TestSelect {
         List<Map<String,Object>> mapList = dao.selectOne("ACCOUNTING","400");
         for (Map<String,Object> maps : mapList){
             System.out.println(maps);
+            System.out.println(maps);
         }
     }
 }
