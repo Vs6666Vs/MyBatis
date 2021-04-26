@@ -21,4 +21,14 @@ public class TestSelect {
             System.out.println(maps);
         }
     }
+
+    @Test
+    public void TestTwo(){
+        SqlSession sqlSession = MyBatisUtils.getSqlSession();
+        EmpDao dao = sqlSession.getMapper(EmpDao.class);
+        List<Map<String,Object>> mapList = dao.selectOne("ACCOUNTING","400");
+        for (Map<String,Object> maps : mapList){
+            System.out.println(maps);
+        }
+    }
 }
